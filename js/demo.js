@@ -12,7 +12,7 @@ const addFile = () => {
       formData.append("videoFile", vildeoFile[0]);
       formData.append("fileName", videoName);
       document.getElementById("loading").classList.remove("d-none");
-      axios.post(`https://plastic-kangaroo-59.localtunnel.me/upload`, formData,
+      axios.post(`https://7f22bd21.ngrok.io/upload`, formData,
         {
           headers: {
             'content-type': 'mutipart/form-data'
@@ -21,7 +21,7 @@ const addFile = () => {
         .then(function (response) {
           var dataObject = response.data;
           console.log(dataObject);
-          axios.get(`https://plastic-kangaroo-59.localtunnel.me/transform`,
+          axios.post(`https://7f22bd21.ngrok.io/transform`,
             {
               videoName
             }
@@ -33,7 +33,7 @@ const addFile = () => {
               videoPlayerRes.innerHTML = '';
               videoPlayerRes.classList.remove("d-none");
               const playerRes = videojs('videoPlayer-res', {
-                sources: [{ src: `https://plastic-kangaroo-59.localtunnel.me/static/result.mp4` }],
+                sources: [{ src: `https://7f22bd21.ngrok.io/static/result-${dataObject.token}.mp4` }],
                 loop: false,
                 autoplay: 'muted',
                 controls: true
