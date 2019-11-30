@@ -40,13 +40,14 @@ a:hover{
 
 .header__logo {
   font-weight: 700;
-  /* padding: 0 25px; */
+  margin: 3px 0 0 0;
   float: left;
   color: white;
 }
 .header__logo img{
-  height: 50px;
-  width: 220px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* MENU */
