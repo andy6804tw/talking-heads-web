@@ -1,9 +1,18 @@
 let videoName = ''
+const modelList = ['陳昇瑋','韓國瑜','蔡英文'];
+const list = document.getElementById('select_model');
+for (let i = 0; i < modelList.length; i++) {
+  const option = document.createElement('option');
+  option.innerHTML = modelList[i];
+  option.setAttribute("value", i);
+  list.appendChild(option);
+}
 
 /** Post File */
 const addFile = () => {
     // File
     const vildeoFile = document.getElementById('videoFile').files;
+    const modelIdx = document.getElementById('select_model').value;
     if (vildeoFile.length) {
       document.getElementById("loading").classList.remove("d-none");
       // 上傳 Image 檔案
@@ -23,7 +32,8 @@ const addFile = () => {
           console.log(dataObject);
           axios.post(`https://7f22bd21.ngrok.io/transform`,
             {
-              videoName
+              videoName,
+              modelIdx
             }
           ).then((response) => {
               const dataObject = response.data;

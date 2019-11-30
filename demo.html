@@ -98,6 +98,16 @@
                         <header>Upload</header>
                         <!-- Data upload -->
                         <fieldset>
+                            <!-- Choose model -->
+                            <section>
+                                <label class="label">Model</label>
+                                <label class="select">
+                                    <select id="select_model" required>
+                                        <option value="">Choose Model
+                                    </select>
+                                    <i></i>
+                                </label>
+                            </section>
                             <!-- EEG file zip -->
                             <section style="max-width: 300px">
                                 <label class="label">Transfer Video</label>
@@ -125,8 +135,8 @@
                             </video>
                         </div> -->
                         <div class="col-6">
-                            <video id="videoPlayer-res" class="video-js vjs-default-skin vjs-4-3 d-none" controls autoplay
-                                preload="auto">
+                            <video id="videoPlayer-res" class="video-js vjs-default-skin vjs-4-3 d-none" controls
+                                autoplay preload="auto">
                             </video>
                         </div>
                     </div>
