@@ -21,7 +21,7 @@ const addFile = () => {
       formData.append("videoFile", vildeoFile[0]);
       formData.append("fileName", videoName);
       document.getElementById("loading").classList.remove("d-none");
-      axios.post(`https://7f22bd21.ngrok.io/upload`, formData,
+      axios.post(`${domain}/upload`, formData,
         {
           headers: {
             'content-type': 'mutipart/form-data'
@@ -30,7 +30,7 @@ const addFile = () => {
         .then(function (response) {
           var dataObject = response.data;
           console.log(dataObject);
-          axios.post(`https://7f22bd21.ngrok.io/transform`,
+          axios.post(`${domain}/transform`,
             {
               videoName,
               modelIdx
@@ -43,7 +43,7 @@ const addFile = () => {
               videoPlayerRes.innerHTML = '';
               videoPlayerRes.classList.remove("d-none");
               const playerRes = videojs('videoPlayer-res', {
-                sources: [{ src: `https://7f22bd21.ngrok.io/static/result-${dataObject.token}.mp4` }],
+                sources: [{ src: `${domain}/static/result-${dataObject.token}.mp4` }],
                 loop: false,
                 autoplay: 'muted',
                 controls: true
