@@ -3,5 +3,5 @@ let domain = '';
 if (env==='development'){
   domain = 'http://localhost:5000';
 }else{
-  domain = 'https://7f22bd21.ngrok.io';
+  domain = 'https://75875c75.ngrok.io';
 }
