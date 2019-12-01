@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   min-height: 100%;
-  background: #a56a44;
+  background: #50badc;
   color: white;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -148,7 +148,7 @@ svg {
   height: 100vh;
   right: 100%;
   z-index: 1;
-  background: #a56a44;
+  background: #50badc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,7 +213,7 @@ svg {
 }
 
 .grid-item {
-  background: #a56a44;
+  background: #50badc;
   position: relative;
   will-change: border;
 }
@@ -225,7 +225,7 @@ svg {
   right: 0;
   bottom: 0;
   width: 0%;
-  background: #a56a44;
+  background: #50badc;
   -webkit-animation: background-swipe-out 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2.1s 1;
           animation: background-swipe-out 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 2.1s 1;
 }
@@ -294,7 +294,7 @@ svg {
   right: 0;
   bottom: 0;
   width: 100%;
-  background: #a56a44;
+  background: #50badc;
   will-change: width;
   -webkit-animation: background-swipe-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
           animation: background-swipe-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
@@ -423,17 +423,17 @@ svg {
 }
 @-webkit-keyframes shuffle {
   0%, 90% {
-    border-left: 0 solid #a56a44;
+    border-left: 0 solid #50badc;
   }
   50% {
-    border-left: 2vw solid #a56a44;
+    border-left: 2vw solid #50badc;
   }
 }
 @keyframes shuffle {
   0%, 90% {
-    border-left: 0 solid #a56a44;
+    border-left: 0 solid #50badc;
   }
   50% {
-    border-left: 2vw solid #a56a44;
+    border-left: 2vw solid #50badc;
   }
 }
