@@ -332,49 +332,29 @@ svg {
   }
 }
 @-webkit-keyframes rotate-expand-out {
-  0%, 15%, 30%, 50%, 65%, 95%, 100% {
+  0%, 15%, 35%, 65% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     padding: .2em 2em;
     opacity: 1;
   }
-  30%, 50% {
+  35%, 65% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     padding: 4em 2.4em;
-  }
-  65%, 95% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    padding: 50vw 50vh;
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    padding: 50vw 50vh;
   }
 }
 @keyframes rotate-expand-out {
-  0%, 15%, 30%, 50%, 65%, 95%, 100% {
+  0%, 15%, 35%, 65% {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     padding: .2em 2em;
     opacity: 1;
   }
-  30%, 50% {
+  35%, 65% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     padding: 4em 2.4em;
-  }
-  65%, 95% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    padding: 50vw 50vh;
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    padding: 50vw 50vh;
   }
 }
 @-webkit-keyframes hide-overlay {
