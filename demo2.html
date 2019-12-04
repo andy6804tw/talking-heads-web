@@ -119,6 +119,8 @@
                                   <input type="radio" name="radio_upload" value="Browse File" checked required/><i></i>Browse File</label>
                                 <label class="radio">
                                   <input type="radio" name="radio_upload" value="Webcam Record" /><i></i>Webcam Record</label>
+                                  <label class="radio">
+                                    <input type="radio" name="radio_upload" value="Realtime" /><i></i>Realtime</label>
                               </div>
                             </section>
                             <!-- Brose File Upload -->
@@ -169,50 +171,30 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> -->
-                    <h4 class="modal-title">Setting</h4>
+                    <h4 class="modal-title">讓圖片動起來!</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="my-2">
-                        IP Address: <input id="ipInput" type="text" value="127.0.0.1"><br />
-                    </div>
-                    <div class="my-2">
-                        PORT: <input id="portInput" type="text" value="5000"><br />
-                    </div>
-                </div>
+                  <p id="text">Comming Soon !</p>
+              </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="buttonOK()">OK</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="">OK</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div>
     <!-- Modal end -->
-    <!-- Modal Model2 -->
-    <div id="modal-dialog" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> -->
-                    <h4 class="modal-title">Upload</h4>
-                </div>
-                <div class="modal-body">
-                    <p id="text">Comming Soon !</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="buttonOK">OK</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
     <!-- Scroll to top -->
     <p class="cd-top text--replace js-cd-top" id="back-top">
         <a href="#"><span></span></a>
     </p>
 
+    <script src="./js/modal.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/demo.js"></script>
     <script src="./js/demo2.js"></script>
+   
     <!-- <script src="../js/modal.min.js"></script> -->
 </body>
 

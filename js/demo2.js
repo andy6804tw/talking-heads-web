@@ -9,15 +9,24 @@ for (radio in uploadMethod) {
         webcamRecord.classList.add("d-none");
         browseFile.classList.remove("d-none");
       }
-      else{
+      else if(this.value==='Webcam Record'){
         webcamRecord.classList.remove("d-none");
         browseFile.classList.add("d-none");
+      }else{
+        call();
       }
   }
 }
 
 
-/** utton Try Again */
+/** Button Try Again */
 const btntAgain=()=>{
   window.location.reload();
 }
+
+/** Call Modal */
+function call() {
+	new Modal({
+		el: document.getElementById('static-modal')
+	}).show();
+};
