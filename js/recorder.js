@@ -67,19 +67,19 @@ stopButton.addEventListener("click", function() {
 }, false);
 
 
-const upload=()=>{
-  // 上傳 Video 檔案
-  const recordFile = new File([recordedBlob], "webm");
-  const formData = new FormData();
-  formData.append("videoFile", recordFile);
-  axios.post(`http://127.0.0.1:5000/upload`, formData,
-    {
-      headers: {
-        'content-type': 'mutipart/form-data'
-      }
-    })
-    .then(function (response) {
-      var dataObject = response.data;
-      console.log(dataObject);
-    })
-}
+// const upload=()=>{
+//   // 上傳 Video 檔案
+//   const recordFile = new File([recordedBlob], "webm");
+//   const formData = new FormData();
+//   formData.append("videoFile", recordFile);
+//   axios.post(`http://127.0.0.1:5000/upload`, formData,
+//     {
+//       headers: {
+//         'content-type': 'mutipart/form-data'
+//       }
+//     })
+//     .then(function (response) {
+//       var dataObject = response.data;
+//       console.log(dataObject);
+//     })
+// }
