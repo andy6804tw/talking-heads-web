@@ -1,8 +1,8 @@
 let videoName = ''
-const modelList = ['陳昇瑋','韓國瑜','蔡英文'];
+const modelList = ['陳昇瑋', '韓國瑜', '蔡英文'];
 const list = document.getElementById('select_model');
-const uploadForm= document.getElementById("uploadForm");
-const btnAgain=document.getElementById("btnAgain");
+const uploadForm = document.getElementById("uploadForm");
+const btnAgain = document.getElementById("btnAgain");
 
 
 for (let i = 0; i < modelList.length; i++) {
@@ -14,59 +14,58 @@ for (let i = 0; i < modelList.length; i++) {
 
 /** Post File */
 const addFile = () => {
-    // File
-    const vildeoFile = document.getElementById('videoFile').files;
-    const modelIdx = document.getElementById('select_model').value;
-    if (vildeoFile.length) {
-      // loading animation
-      document.getElementById("loading").classList.remove("d-none");
-      // hidden upload form
-      uploadForm.classList.add("d-none");
-      // 上傳 Image 檔案
-      const formData = new FormData();
-      videoName=`srcVideo.${vildeoFile[0].name.split(".")[1]}`;
-      formData.append("videoFile", vildeoFile[0]);
-      formData.append("fileName", videoName);
-      document.getElementById("loading").classList.remove("d-none");
-      axios.post(`${domain}/upload`, formData,
-        {
-          headers: {
-            'content-type': 'mutipart/form-data'
+  // File
+  const vildeoFile = document.getElementById('videoFile').files;
+  const modelIdx = document.getElementById('select_model').value;
+  if (vildeoFile.length && modelIdx !== '') {
+    // loading animation
+    document.getElementById("loading").classList.remove("d-none");
+    // hidden upload form
+    uploadForm.classList.add("d-none");
+    // 上傳 Image 檔案
+    const formData = new FormData();
+    videoName = `srcVideo.${vildeoFile[0].name.split(".")[1]}`;
+    formData.append("videoFile", vildeoFile[0]);
+    formData.append("fileName", videoName);
+    document.getElementById("loading").classList.remove("d-none");
+    axios.post(`${domain}/upload`, formData,
+      {
+        headers: {
+          'content-type': 'mutipart/form-data'
+        }
+      })
+      .then(function (response) {
+        var dataObject = response.data;
+        console.log(dataObject);
+        axios.post(`${domain}/transform`,
+          {
+            videoName,
+            modelIdx
           }
-        })
-        .then(function (response) {
-          var dataObject = response.data;
+        ).then((response) => {
+          const dataObject = response.data;
           console.log(dataObject);
-          axios.post(`${domain}/transform`,
-            {
-              videoName,
-              modelIdx
-            }
-          ).then((response) => {
-              const dataObject = response.data;
-              console.log(dataObject);
-              // Render result video
-              const videoPlayerRes = document.getElementById("videoPlayer-res");
-              videoPlayerRes.innerHTML = '';
-              videoPlayerRes.classList.remove("d-none");
-              const playerRes = videojs('videoPlayer-res', {
-                sources: [{ src: `${domain}/static/result-${dataObject.token}.mp4` }],
-                loop: false,
-                autoplay: 'muted',
-                controls: true
-              });
-              // Stop loaging animate
-              document.getElementById("loading").classList.add("d-none");
-              // Show try again button
-              btnAgain.classList.remove("d-none");
-            },
-              (error) => {
-                var message = error.response.data.message;
-              }
-            );
-        })
-    }
+          // Render result video
+          const videoPlayerRes = document.getElementById("videoPlayer-res");
+          videoPlayerRes.innerHTML = '';
+          videoPlayerRes.classList.remove("d-none");
+          const playerRes = videojs('videoPlayer-res', {
+            sources: [{ src: `${domain}/static/result-${dataObject.token}.mp4` }],
+            loop: false,
+            autoplay: 'muted',
+            controls: true
+          });
+          // Stop loaging animate
+          document.getElementById("loading").classList.add("d-none");
+          // Show try again button
+          btnAgain.classList.remove("d-none");
+        },
+          (error) => {
+            var message = error.response.data.message;
+          }
+        );
+      })
   }
-  
-  
-  
+}
+
+
