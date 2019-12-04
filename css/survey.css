@@ -482,12 +482,16 @@
   text-align: center;
 }
 
+/* tab */
 .sky-form .upload-method{
   padding-left: 0;
   padding-right: 0;
 }
 .sky-form .tab-content{
   padding: 20px;
+}
+.sky-form .nav-item a.active{
+  color: #2da5da;
 }
 
 @media screen and (max-width: 600px) {
