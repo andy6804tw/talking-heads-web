@@ -51,10 +51,7 @@
   font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
   /* color: #666; */
 }
-.sky-form * {
-  margin: 0;
-  padding: 0;
-}
+
 .sky-form header {
   display: block;
   padding: 20px 30px;
@@ -87,7 +84,7 @@
   display: table;
   clear: both;
 }
-.sky-form a {
+.sky-form a:hover {
   color: #2da5da;
 }
 .sky-form .label {
@@ -485,6 +482,13 @@
   text-align: center;
 }
 
+.sky-form .upload-method{
+  padding-left: 0;
+  padding-right: 0;
+}
+.sky-form .tab-content{
+  padding: 20px;
+}
 
 @media screen and (max-width: 600px) {
   .body {
