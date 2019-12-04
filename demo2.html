@@ -123,20 +123,23 @@
                                     <input type="radio" name="radio_upload" value="Realtime" /><i></i>Realtime</label>
                               </div>
                             </section>
-                            <!-- Brose File Upload -->
-                            <section style="max-width: 300px" id="browseFile">
-                                <label class="label">Transfer Video</label>
-                                <label for="file" class="input input-file">
-                                    <div class="button"><input type="file" id="videoFile" accept="video/*"
-                                            onchange="this.parentNode.nextSibling.value = this.files[0].name"
-                                            required />Browse
-                                    </div><input type="text" readonly="" />
-                                </label>
-                            </section>
-                            <!-- Webcam Record Upload -->
-                            <section class="d-none" style="max-width: 300px" id="webcamRecord">
-                              vxcvx
-                            </section>
+                        </fieldset>
+                        <fieldset>
+                          <h5>Browse File</h5>
+                          <!-- Brose File Upload -->
+                          <section style="max-width: 300px" id="browseFile">
+                              <label class="label">Transfer Video</label>
+                              <label for="file" class="input input-file">
+                                  <div class="button"><input type="file" id="videoFile" accept="video/*"
+                                          onchange="this.parentNode.nextSibling.value = this.files[0].name"
+                                          required />Browse
+                                  </div><input type="text" readonly="" />
+                              </label>
+                          </section>
+                          <!-- Webcam Record Upload -->
+                          <section class="d-none" style="max-width: 300px" id="webcamRecord">
+                            vxcvx
+                          </section>
                         </fieldset>
                         <footer>
                             <button type="submit" class="button" onclick="addFile()">Submit</button>

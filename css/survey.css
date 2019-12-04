@@ -60,7 +60,7 @@
   padding: 20px 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(248, 248, 248, 0.9);
-  font-size: 25px;
+  font-size: 26px;
   font-weight: 300;
   color: #232323;
 }
@@ -127,6 +127,10 @@
   appearance: normal;
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+.sky-form h5{
+  font-size: 18px;
+  font-weight: 300;
 }
 /**/
 /* file inputs */
