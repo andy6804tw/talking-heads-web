@@ -96,8 +96,8 @@
 
             <!-- Context 內容 -->
             <div class="container my-4">
-                <section class="px-5 py-4">
-                    <form class="sky-form" action="javascript:void(0);" method="post" name="fileForm">
+                <section class="px-5 py-4" id="uploadForm">
+                    <form class="sky-form" action="javascript:void(0);" method="post" name="uploadForm">
                         <header>Upload</header>
                         <!-- Data upload -->
                         <fieldset>
@@ -116,13 +116,13 @@
                               <label class="label">Upload Method</label>
                               <div class="inline-group" id="upload_group">
                                 <label class="radio">
-                                  <input type="radio" name="radio_upload" value="File" required/><i></i>File</label>
+                                  <input type="radio" name="radio_upload" value="Browse File" checked required/><i></i>Browse File</label>
                                 <label class="radio">
                                   <input type="radio" name="radio_upload" value="Webcam Record" /><i></i>Webcam Record</label>
                               </div>
                             </section>
-                            <!-- EEG file zip -->
-                            <section style="max-width: 300px">
+                            <!-- Brose File Upload -->
+                            <section style="max-width: 300px" id="browseFile">
                                 <label class="label">Transfer Video</label>
                                 <label for="file" class="input input-file">
                                     <div class="button"><input type="file" id="videoFile" accept="video/*"
@@ -130,6 +130,10 @@
                                             required />Browse
                                     </div><input type="text" readonly="" />
                                 </label>
+                            </section>
+                            <!-- Webcam Record Upload -->
+                            <section class="d-none" style="max-width: 300px" id="webcamRecord">
+                              vxcvx
                             </section>
                         </fieldset>
                         <footer>
@@ -139,8 +143,6 @@
                     </form>
                 </section>
                 <section class="px-5 py-4 text-center">
-                    <!-- <video id="videoPlayer" class="d-none" width="720" controls>
-          </video> -->
                     <div class="row justify-content-center align-items-center text-center">
                         <!-- <div class="col-6">
                             <video id="videoPlayer-src" class="video-js vjs-default-skin vjs-4-3 d-none" controls autoplay
@@ -154,7 +156,7 @@
                         </div>
                     </div>
                 </section>
-
+                <button type="button" class="btn btn-success float-right d-none" id="btnAgain" onclick="btntAgain()">Try again !</button>
             </div><!-- END context -->
 
 
