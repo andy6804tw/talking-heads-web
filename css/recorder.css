@@ -16,3 +16,17 @@ video {
   background-color: darkgreen;
   text-decoration: none;
 }
+
+.object{
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  z-index: 1000;
+  outline: solid red 1px;
+  outline-offset: -5px;
+  width: 256px;
+  height: 256px;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+}
