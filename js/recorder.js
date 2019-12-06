@@ -5,6 +5,7 @@ let stopButton = document.getElementById("stopButton");
 let downloadButton = document.getElementById("downloadButton");
 let logElement = document.getElementById("log");
 let recordedBlob;
+let recordFile='';
 
 let recordingTimeMS = 5000;
 function log(msg) {
@@ -53,6 +54,7 @@ startButton.addEventListener("click", function() {
   .then (recordedChunks => {
     console.log('stop');
     recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+    recordFile=new File([recordedBlob], "webm");
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
     downloadButton.download = "RecordedVideo.webm";

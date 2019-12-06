@@ -11,22 +11,32 @@ for (let i = 0; i < modelList.length; i++) {
   option.setAttribute("value", i);
   list.appendChild(option);
 }
-
 /** Post File */
 const addFile = () => {
   // File
+  const formData = new FormData();
   const vildeoFile = document.getElementById('videoFile').files;
   const modelIdx = document.getElementById('select_model').value;
-  if (vildeoFile.length && modelIdx !== '') {
+  if ((vildeoFile.length||recordFile!=='') && modelIdx !== '') {
+    // Get video file
+    if(recordFile!==''){
+      videoName = `srcVideo.webm`;
+      formData.append("videoFile", recordFile);
+      formData.append("fileName", videoName);
+    }else{
+      console.log('innnn')
+      videoName = `srcVideo.${vildeoFile[0].name.split(".")[1]}`;
+      console.log(videoName)
+      formData.append("videoFile", vildeoFile[0]);
+      formData.append("fileName", videoName);
+    }
     // loading animation
     document.getElementById("loading").classList.remove("d-none");
     // hidden upload form
     uploadForm.classList.add("d-none");
     // 上傳 Image 檔案
-    const formData = new FormData();
-    videoName = `srcVideo.${vildeoFile[0].name.split(".")[1]}`;
-    formData.append("videoFile", vildeoFile[0]);
-    formData.append("fileName", videoName);
+    
+    
     document.getElementById("loading").classList.remove("d-none");
     axios.post(`${domain}/upload`, formData,
       {
