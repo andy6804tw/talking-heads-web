@@ -47,7 +47,7 @@ const addFile = () => {
       .then(function (response) {
         var dataObject = response.data;
         console.log(dataObject);
-        axios.post(`${domain}/transform`,
+        axios.post(`${domain}/transform/video`,
           {
             videoName,
             modelIdx
