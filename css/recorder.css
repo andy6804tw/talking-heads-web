@@ -1,8 +1,14 @@
-.video-record {
+.tab-pane video {
   width: 100%;
   min-height: 350px;
+  max-height: 350px;
+  height: auto;
   margin-top: 2px;
   border: 1px solid black;
+}
+
+video {
+  width: 100%;
 }
 
 .btnRecord {

@@ -112,8 +112,8 @@
                   <i></i>
                 </label>
               </section>
-              <!-- Select upload method -->
-              <section>
+              <!-- Select Device -->
+              <!-- <section>
                 <label class="label">Device</label>
                 <div class="inline-group" id="upload_group">
                   <label class="radio">
@@ -122,7 +122,7 @@
                   <label class="radio">
                     <input type="radio" name="radio_upload" value="Webcam Record" checked/><i></i>GPU</label>
                 </div>
-              </section>
+              </section> -->
             </fieldset>
             <fieldset class="upload-method">
               <label class="label ml-4">Upload Method</label>
@@ -157,7 +157,7 @@
                   <!-- Webcam Record Upload -->
                   <div class="tab-pane fade" id="webcamRecord">
                       <div class="row justify-content-center align-items-center text-center">
-                          <div class="col-lg-6 col-md-12 col-sm-12">
+                          <div class=" col-lg-6 col-md-12 col-sm-12">
                             <div id="startButton" class="btnRecord">
                               Start
                             </div>
@@ -165,14 +165,14 @@
                             <div class="object">
                                 臉部對準框線 
                             </div>
-                            <video id="preview" width="256" height="256" autoplay muted></video>
+                            <video class="video-record" id="preview" width="256" height="256" autoplay muted></video>
                           </div>
-                          <div class="col-lg-6 col-md-12 col-sm-12">
+                          <div class=" col-lg-6 col-md-12 col-sm-12">
                             <div id="stopButton" class="btnRecord">
                               Stop
                             </div>
                             <h5>Recording</h5>
-                            <video id="recording" width="256" height="256" controls></video>
+                            <video class="video-record" id="recording" width="256" height="256" controls></video>
                           </div>
                         </div>
                         <a id="downloadButton" class="btnRecord">
