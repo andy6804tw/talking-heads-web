@@ -42,9 +42,8 @@ function stop(stream) {
 }
 startButton.addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
-    video: true,
     audio: true,
-    video: { width: 256, height: 256 }
+    video: { width: 256, height: 256, frameRate: 29 }
   }).then(stream => {
     preview.srcObject = stream;
     downloadButton.href = stream;
