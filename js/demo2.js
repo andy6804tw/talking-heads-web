@@ -37,6 +37,11 @@ const selectMethod=(id)=>{
   const navItem=document.getElementsByClassName("nav-tabs");
   const list=navItem[0].getElementsByTagName("li");
   const tabPane=document.getElementsByClassName("tab-pane");
+  // control webcam open/close
+  if(id==1)
+    initWebcam();
+  else
+    stop(preview.srcObject);
   for(let i=0;i<3;i++){
     if(i===id){
       list[i].getElementsByTagName("a")[0].classList.add("active");

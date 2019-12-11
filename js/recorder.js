@@ -80,7 +80,8 @@ stopButton.addEventListener("click", function() {
 
 
 
-// start webcam
+const initWebcam=()=>{
+  // start webcam
 navigator.mediaDevices.getUserMedia({
   audio: true,
   video: { width: 256, height: 256, frameRate: 29 }
@@ -90,3 +91,4 @@ navigator.mediaDevices.getUserMedia({
   log("Successfully open webcam!")
   return new Promise(resolve => preview.onplaying = resolve);
 }).catch(log);
+}
