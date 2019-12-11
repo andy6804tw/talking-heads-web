@@ -28,7 +28,10 @@ function startRecording(stream, lengthInMS) {
   });
 
   let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop()
+    () =>{
+      stop(preview.srcObject);
+      recorder.state == "recording" && recorder.stop()
+    } 
   );
  
   return Promise.all([
@@ -41,22 +44,12 @@ function stop(stream) {
   stream.getTracks().forEach(track => track.stop());
 }
 startButton.addEventListener("click", function() {
-  navigator.mediaDevices.getUserMedia({
-    audio: true,
-    video: { width: 256, height: 256, frameRate: 29 }
-  }).then(stream => {
-    preview.srcObject = stream;
-    downloadButton.href = stream;
-    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise(resolve => preview.onplaying = resolve);
-  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
+  startRecording(preview.captureStream(), recordingTimeMS)
   .then (recordedChunks => {
     console.log('stop');
     recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recordFile=new File([recordedBlob], "webm");
     recording.src = URL.createObjectURL(recordedBlob);
-    downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
@@ -84,3 +77,16 @@ stopButton.addEventListener("click", function() {
 //       console.log(dataObject);
 //     })
 // }
+
+
+
+// start webcam
+navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: { width: 256, height: 256, frameRate: 29 }
+}).then(stream => {
+  preview.srcObject = stream;
+  preview.captureStream = preview.captureStream || preview.mozCaptureStream;
+  log("Successfully open webcam!")
+  return new Promise(resolve => preview.onplaying = resolve);
+}).catch(log);
