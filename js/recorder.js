@@ -7,7 +7,7 @@ let logElement = document.getElementById("log");
 let recordedBlob;
 let recordFile = '';
 
-let recordingTimeMS = 5000;
+let recordingTimeMS = 20000;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
