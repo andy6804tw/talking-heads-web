@@ -7,7 +7,7 @@ let logElement = document.getElementById("log");
 let recordedBlob;
 let recordFile = '';
 
-let recordingTimeMS = 20000;
+let recordingTimeMS =6000;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
@@ -22,17 +22,17 @@ function startRecording(stream, lengthInMS) {
   recorder.start();
   log(recorder.state + " for " + (lengthInMS / 1000) + " seconds...");
 
-  let stopped = new Promise((resolve, reject) => {
-    recorder.onstop = resolve;
-    recorder.onerror = event => reject(event.name);
-  });
-
   let recorded = wait(lengthInMS).then(
     () => {
       stop(preview.srcObject);
       recorder.state == "recording" && recorder.stop()
     }
   );
+  let stopped = new Promise((resolve, reject) => {
+    recorder.onstop = resolve;
+    recorder.onerror = event => reject(event.name);
+    clearInterval(recorded);
+  });
 
   return Promise.all([
     stopped,
