@@ -278,6 +278,10 @@
 .sky-form .inline-group .radio:last-child, .sky-form .inline-group .checkbox:last-child {
   margin-bottom: 4px;
 }
+.sky-form .inline-group img{
+  width: 50%;
+}
+
 
 /**/
 /* buttons */
