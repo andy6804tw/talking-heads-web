@@ -1,5 +1,5 @@
 let videoName = ''
-const modelList = ['陳昇瑋', '韓國瑜', '蔡英文'];
+const modelList = ['陳昇瑋', '韓國瑜', '蔡英文', '孫中山', '克勞德'];
 const list = document.getElementById('select_model');
 const uploadForm = document.getElementById("uploadForm");
 const btnAgain = document.getElementById("btnAgain");
