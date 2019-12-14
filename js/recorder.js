@@ -7,7 +7,7 @@ let logElement = document.getElementById("log");
 let recordedBlob;
 let recordFile = '';
 
-let recordingTimeMS =6000;
+let recordingTimeMS =11000;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
@@ -20,7 +20,7 @@ function startRecording(stream, lengthInMS) {
 
   recorder.ondataavailable = event => data.push(event.data);
   recorder.start();
-  log(recorder.state + " for " + (lengthInMS / 1000) + " seconds...");
+  log(recorder.state + " for " + (lengthInMS / 1000)-1 + " seconds...");
 
   let recorded = wait(lengthInMS).then(
     () => {
