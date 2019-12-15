@@ -1,22 +1,23 @@
 let videoName = ''
-const modelList = ['陳昇瑋', '韓國瑜', '蔡英文', '孫中山', '克勞德'];
-const list = document.getElementById('select_model');
+// const modelList = ['陳昇瑋', '韓國瑜', '蔡英文', '孫中山', '克勞德'];
+// const list = document.getElementById('select_model');
 const uploadForm = document.getElementById("uploadForm");
 const btnAgain = document.getElementById("btnAgain");
 
 
-for (let i = 0; i < modelList.length; i++) {
-  const option = document.createElement('option');
-  option.innerHTML = modelList[i];
-  option.setAttribute("value", i);
-  list.appendChild(option);
-}
+// for (let i = 0; i < modelList.length; i++) {
+//   const option = document.createElement('option');
+//   option.innerHTML = modelList[i];
+//   option.setAttribute("value", i);
+//   list.appendChild(option);
+// }
 /** Post File */
 const addFile = () => {
   // File
   const formData = new FormData();
   const vildeoFile = document.getElementById('videoFile').files;
-  const modelIdx = document.getElementById('select_model').value;
+  const modelIdx = document.querySelector('input[name="radio_model"]:checked').value;
+  console.log(modelIdx);
   if ((vildeoFile.length||recordFile!=='') && modelIdx !== '') {
     // Get video file
     if(recordFile!==''){
