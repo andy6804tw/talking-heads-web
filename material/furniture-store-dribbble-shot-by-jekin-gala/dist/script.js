@@ -11,3 +11,13 @@ document.getElementById('navToggle').addEventListener("click", event => {
       "closed";
   }
 });
+
+
+var anchor = document.querySelector('a[href="#section1"]')
+var target = document.getElementById('section1')
+anchor.addEventListener('click', function (e) {
+  if (window.scrollTo) {
+    e.preventDefault()
+    window.scrollTo({'behavior': 'smooth', 'top': target.offsetTop})
+  }
+})
