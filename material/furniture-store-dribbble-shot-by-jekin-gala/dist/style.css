@@ -234,6 +234,7 @@ svg {
   display: grid;
   align-items: center;
   justify-items: start;
+  opacity:.9;
 }
 .grid-item--primary > img,
 .grid-item--primary > .logo {
