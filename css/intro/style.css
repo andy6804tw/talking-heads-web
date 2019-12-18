@@ -7,6 +7,16 @@
 }
 
 .section2 img{
-  width: 70%;
+  width: 60%;
   height: auto;
+}
+
+.demo1 img:hover{
+  content:url(../../../image/demo/demo1.gif);
+}
+.demo2 img:hover{
+  content:url(../../../image/demo/demo2.gif);
+}
+.demo3 img:hover{
+  content:url(../../../image/demo/demo3.gif);
 }
