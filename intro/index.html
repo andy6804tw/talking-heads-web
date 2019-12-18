@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Furniture Store (dribbble shot by Jekin Gala)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:700|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/intro/style.css">
+	<link rel="stylesheet" href="/css/intro/scroll-down.css">
+
+</head>
+
+<body>
+	<!-- Init Animation -->
+	<div class="loading-overlay d-none" id="loadingOverlay">
+		<span class="loading-overlay__content h1">
+			<img src="/image/logo.png" alt="">
+		</span>
+	</div>
+	<div class="loading_mobile d-nonse" id="loadingMobile">
+		<img id="imgMobile" src="" style="width: 100%;">
+	</div>
+	<!-- partial:index.partial.html -->
+	<button class="nav-toggle" id="navToggle" data-menustate="closed">
+		<svg class="icon icon--menu" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 0h24v24H0z" fill="none" />
+			<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+		</svg>
+		<svg class="icon icon--close" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+			<path d="M0 0h24v24H0z" fill="none" />
+		</svg>
+	</button>
+	<nav class="nav" data-state="closed">
+		<a href="#" style="--delay: .35s">About</a>
+		<a href="#" style="--delay: .4s">Studio</a>
+		<a href="#" style="--delay: .45s">Products</a>
+		<a href="#" style="--delay: .5s">Contact</a>
+	</nav>
+	<header class="header" data-menustate="closed">
+		<div class="grid-item grid-item--primary text-center">
+			<!-- <img src="https://i.imgur.com/XaU3NOw.jpg" class="object-fit" alt="chair"> -->
+			<!-- <a href="" class="logo">dfsdf</a> -->
+			<a href="#section1" class="scroll-down">
+				<div class="box">
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<div class="grid-item grid-item--secondary  grid-item--content">
+			<article class="article  article--align-right">
+				<h5 class="rotate rotate--right">Made in<br />Sweden</h5>
+			</article>
+			<article class="article">
+				<h4><span>1992</span> <span>2018</span></h4>
+				<h2>讓圖片動起來吧!</h2>
+				<p>Within the different collections of various creative fields and directions from furniture.</p>
+			</article>
+		</div>
+		<div class="grid-item grid-item--secondary">
+			<img src="../../../image/demo/demo8.gif" class="object-fit" alt="chair">
+		</div>
+		<div class="grid-item grid-item--tertiary">
+			<!-- 舞動 -->
+			<img src="../../../image/demo/demo1.gif" class="object-fit" alt="chair">
+		</div>
+		<div class="grid-item grid-item--tertiary grid-item--content">
+			<article class="article">
+				<p>Be the first to recieve our latest publication <a href="#">Subscribe</a></p>
+			</article>
+		</div>
+		<div class="grid-item grid-item--tertiary">
+			<!-- 孫中山 -->
+			<img src="../../../image/demo/demo4.gif" class="object-fit" alt="chair">
+		</div>
+	</header>
+	<section style="background: #bd7f57;" id="section1">
+		<div class="p-5">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-md-6">
+					<img src="https://i.imgur.com/zz1xrMU.png" style="width: 100%;height: 100%;">
+				</div>
+				<div class="col-md-6">
+					<h2>AdaIN-GAN</h2>
+					Generative Adversarial Networks, or GANs for short, are effective at generating large high-quality images.
+
+					Most improvement has been made to discriminator models in an effort to train more effective generator models,
+					although less effort has been put into improving the generator models.
+
+					The Style Generative Adversarial Network, or StyleGAN for short, is an extension to the GAN architecture that
+					proposes large changes to the generator model, including the use of a mapping network to map points in latent
+					space to an intermediate latent space, the use of the intermediate latent space to control style at each point
+					in the generator model, and the introduction to noise as a source of variation at each point in the generator
+					model.
+
+					The resulting model is capable not only of generating impressively photorealistic high-quality photos of
+					faces, but also offers control over the style of the generated image at different levels of detail through
+					varying the style vectors and noise.
+				</div>
+			</div>
+			<div class="row justify-content-center align-items-center pt-4">
+				<div class="col-md-6">
+					<h2>Self Attention Block</h2>
+					Sentiment Analysis has seen much progress in the past two decades. For the past few years, neural network
+					approaches, primarily RNNs and CNNs, have been the most successful for this task. Recently, a new category of
+					neural networks, self-attention networks (SANs), have been created which utilizes the attention mechanism as
+					the basic building block. Self-attention networks have been shown to be effective for sequence modeling tasks,
+					while having no recurrence or convolutions. In this work we explore the effectiveness of the SANs for
+					sentiment analysis. We demonstrate that SANs are superior in performance to their RNN and CNN counterparts by
+					comparing their classification accuracy on six datasets as well as their model characteristics such as
+					training speed and memory consumption. Finally, we explore the effects of various SAN modifications such as
+					multi-head attention as well as two methods of incorporating sequence position information into SANs.
+				</div>
+				<div class="col-md-6">
+					<img src="https://i.imgur.com/44E3344.png" style="width: 100%;height: 100%;">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section style="height: 600px;background: #2f3238;" id="section2">
+		<div class="container p-5">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-4">
+					<img src="https://i.imgur.com/HGvzFG1.png" alt="" srcset="">
+				</div>
+				<div class="col-4">
+					<img src="https://i.imgur.com/j39NCtH.png" alt="">
+				</div>
+				<div class="col-4">
+					<img src="https://i.imgur.com/9D7IIFU.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/js/intro/checkDevice.js"></script>
+	<script src="/js/intro/index.js"></script>
+
+</body>
+
+</html>

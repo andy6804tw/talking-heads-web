@@ -80,3 +80,37 @@ const addFile = () => {
 }
 
 
+/** Tab select method */
+const selectMethod=(id)=>{
+  id=parseInt(id,10);
+  const navItem=document.getElementsByClassName("nav-tabs");
+  const list=navItem[0].getElementsByTagName("li");
+  const tabPane=document.getElementsByClassName("tab-pane");
+  // control webcam open/close
+  if(id==1)
+    initWebcam();
+  else
+    stop(preview.srcObject);
+  for(let i=0;i<3;i++){
+    if(i===id){
+      list[i].getElementsByTagName("a")[0].classList.add("active");
+      tabPane[i].classList.add("show", "active");
+    }
+    else{
+      list[i].getElementsByTagName("a")[0].classList.remove("active");
+      tabPane[i].classList.remove("show", "active");
+    }
+  }
+}
+
+/** Button Try Again */
+const btntAgain=()=>{
+  window.location.reload();
+}
+
+/** Call Modal */
+function call() {
+	new Modal({
+		el: document.getElementById('static-modal')
+	}).show();
+};
