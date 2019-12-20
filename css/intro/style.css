@@ -1,9 +1,19 @@
 .section1{
   background: #2f3238;
+  background-image: url(https://images.unsplash.com/photo-1574426105737-14c1ae13d884?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+  background-size:   cover;                   
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-attachment: fixed;
 }
 
 .section2{
   height: 400px;background: #2f3238;
+  background-image: url(https://images.unsplash.com/photo-1574426105737-14c1ae13d884?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+  background-size:   cover;                   
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-attachment: fixed;
 }
 
 .section2 img{
@@ -23,4 +33,24 @@
 
 .section3{
   background: #2f3238;
+  background-image: url(https://images.unsplash.com/photo-1574434722448-76adff8cd481?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+  background-size:   cover;                   
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-attachment: fixed;
+}
+
+#site-footer {
+  position: relative;
+  background-color: #051824;
+  height: 120px;
+}
+.copy{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size:12px;
+  text-align:center;
+  color: white;
+  font-weight: 300;
 }
