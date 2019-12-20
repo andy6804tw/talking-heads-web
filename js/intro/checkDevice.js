@@ -5,8 +5,7 @@ if(window.screen.height>window.screen.width){
   loadingMobile.classList.remove('d-none');
   console.log('mobile');
   const imgMobile=document.getElementById('imgMobile');
-  document.getElementById('logo').innerText='mobile';
-  imgMobile.src='./image/animate.gif'
+  imgMobile.src='https://i.imgur.com/CQ7c6KQ.gif'
   imgMobile.onload=function(){
     setTimeout(function(){
       loadingMobile.innerHTML='';
