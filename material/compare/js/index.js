@@ -2,13 +2,13 @@ document.getElementsByClassName('juxtapose')[0].innerHTML='';
   slider = new juxtapose.JXSlider('.juxtapose',
     [
       {
-        src: `https://i.imgur.com/HGvzFG1.png`,
-        label: 'Before',
+        src: `https://imgur.com/JepQaor.gif`,
+        label: 'Target',
         // credit: 'Image Credit'
       },
       {
-        src: `https://i.imgur.com/HGvzFG1.png`,
-        label: 'After',
+        src: `https://i.imgur.com/4jTV2jM.gif`,
+        label: 'Driver',
         // credit: "Image Credit"
       }
     ],
