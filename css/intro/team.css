@@ -44,10 +44,6 @@ a:hover{
   color: #a5a5a5;
 } */
 
-.team{
-  margin:40px;
-}
-
 .team-member {
   margin: 15px 0;
   padding: 0;
@@ -116,7 +112,7 @@ a:hover{
 .team-member figure:hover figcaption {
   visibility: visible;
   color: #fff;
-  background: rgba(230, 78, 62, 0.9);
+  background: #50b9dcec;
   /* Primary color, can be changed via colors.css */
   
   height: 100%;

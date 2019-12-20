@@ -1,5 +1,5 @@
 .section1{
-  background: #bd7f57;
+  background: #2f3238;
 }
 
 .section2{
@@ -19,4 +19,8 @@
 }
 .demo3 img:hover{
   content:url(../../../image/demo/demo3.gif);
+}
+
+.section3{
+  background: #2f3238;
 }
