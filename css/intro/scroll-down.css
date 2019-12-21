@@ -13,7 +13,12 @@
   position: absolute;
   bottom: 10%;
   left: 50%;
-  right: 50%;
+  /* right: 50%; */
+}
+
+.scroll-down .text{
+	margin-left: -25px;
+	margin-bottom: 5px;
 }
 
 .box span {

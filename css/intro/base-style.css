@@ -239,11 +239,12 @@ svg {
   align-items: center;
   justify-items: start;
   opacity:1;
-  background-image:  url(https://i.imgur.com/QCHf2kS.jpg);
+  background-image:  url(https://i.imgur.com/ayFBYX6.jpg);
   background-size:   cover;                   
   background-repeat: no-repeat;
   background-position: center center; 
   background-attachment: fixed;
+  opacity: .9;
 }
 .grid-item--primary > img,
 .grid-item--primary > .logo {
