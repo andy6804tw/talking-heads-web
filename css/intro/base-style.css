@@ -244,7 +244,6 @@ svg {
   background-repeat: no-repeat;
   background-position: center center; 
   background-attachment: fixed;
-  opacity: .9;
 }
 .grid-item--primary > img,
 .grid-item--primary > .logo {
@@ -437,3 +436,18 @@ svg {
     border-left: 2vw solid #50badc;
   }
 }
+
+@media (max-width:1265px){
+  .grid-item--primary {
+    grid-area: span 3 / span 6;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    opacity:1;
+    background-image:  url(https://i.imgur.com/XaU3NOw.jpg);
+    background-size:   cover;                   
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: scroll;
+  }
+} 
