@@ -1,3 +1,5 @@
+## talking-heads-web
+本專案基於 `Few-Shot Adversarial Learning of Realistic Neural Talking Head Models` 進行實作。此模型分為兩個階段，第一個是meta-learning stage，另一個是fine-tuning stage。借助Few-shot Learning的概念，我們訓練一個Meta Learner，可以在相對極短的時間內針對少量樣本的臉部五官和圖片風格去做finetune，達成讓畫像動起來的驚人效果。通常在meta-learning stage訓練完後就可以生成圖，但會有不可識別身份的缺陷，再經過fine-tuning stage就可以改善表現不好的部分。
 
 
 ## Reference
