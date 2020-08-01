@@ -22,13 +22,13 @@
 }
 
 .demo1 img:hover{
-  content:url(../../../image/demo/demo1.gif);
+  content:url(../../image/demo/demo1.gif);
 }
 .demo2 img:hover{
-  content:url(../../../image/demo/demo2.gif);
+  content:url(../../image/demo/demo2.gif);
 }
 .demo3 img:hover{
-  content:url(../../../image/demo/demo3.gif);
+  content:url(../../image/demo/demo3.gif);
 }
 
 .section3{
